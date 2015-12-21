@@ -1,6 +1,7 @@
 
 package com.jfinal.weixin.demo;
 
+import com.javen.weixin.Controller.UserController;
 import com.javen.weixin.share.ShareController;
 import com.javen.weixin.weboauth2.RedirectUri;
 import com.jfinal.config.Constants;
@@ -51,6 +52,7 @@ public class WeixinConfig extends JFinalConfig {
 		me.add("/pay", WeixinPayController.class);
 		me.add("/jssdk", JssdkController.class,"jsp");
 		me.add("/oauth2",RedirectUri.class);
+		me.add("/user",UserController.class);
 		/**
 		 * 存在一个bug
 		 * JSP support not configured
