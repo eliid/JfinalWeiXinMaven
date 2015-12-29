@@ -74,7 +74,7 @@ public class ShareController extends ApiController {
 		setAttr("signature", signature);
 		setAttr("jsapi_ticket", jsapi_ticket);
 
-		render("/_front/share.jsp");
+		render("share.jsp");
 
 	}
 

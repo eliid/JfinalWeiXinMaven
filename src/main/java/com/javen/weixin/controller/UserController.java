@@ -1,4 +1,4 @@
-package com.javen.weixin.Controller;
+package com.javen.weixin.controller;
 
 
 import java.io.File;
@@ -10,7 +10,7 @@ import java.util.List;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.javen.weixin.Controller.UserConfig.LangType;
+import com.javen.weixin.controller.UserConfig.LangType;
 import com.jfinal.kit.HttpKit;
 import com.jfinal.kit.JsonKit;
 import com.jfinal.kit.PropKit;

@@ -193,14 +193,15 @@ public class WeixinMsgController extends MsgController {
 				e.printStackTrace();
 			}
 		}else if ("授权".equalsIgnoreCase(msgContent)) {
-			String url="http://javen.tunnel.mobi/my_weixin/oauth2/oauth";
+			String url="http://http://javen.ngrok.natapp.cn/oauth2/oauth";
 			String urlStr="<a href=\""+url+"\">点击我授权</a>";
 			renderOutTextMsg("授权地址"+urlStr);
+		}else if ("jssdk".equalsIgnoreCase(msgContent)) {
+			String url="http://javen.ngrok.natapp.cn/jssdk";
+			String urlStr="<a href=\""+url+"\">JSSDK</a>";
+			renderOutTextMsg("地址"+urlStr);
 		}
-		else if ("分享".equalsIgnoreCase(msgContent)) {
-			String url="<a href=\"http://javen.ngrok.natapp.cn/share\">分享吧</a>";
-			renderOutTextMsg(url);
-		}else if (msgContent.equals("8") || "开发者模式".equalsIgnoreCase(msgContent)) {
+		else if (msgContent.equals("8") || "开发者模式".equalsIgnoreCase(msgContent)) {
 			String url="url:http://203.88.160.193/my_weixin/msg"
 					+"\n token:Javen \n 使用兼容模式";
 			renderOutTextMsg(url);

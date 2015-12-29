@@ -1,7 +1,7 @@
 
 package com.jfinal.weixin.demo;
 
-import com.javen.weixin.Controller.UserController;
+import com.javen.weixin.controller.UserController;
 import com.javen.weixin.share.ShareController;
 import com.javen.weixin.weboauth2.RedirectUri;
 import com.jfinal.config.Constants;
@@ -50,18 +50,20 @@ public class WeixinConfig extends JFinalConfig {
 		me.add("/api", WeixinApiController.class, "/api");
 		//此接口待测试
 		me.add("/pay", WeixinPayController.class);
-		me.add("/jssdk", JssdkController.class,"jsp");
 		me.add("/oauth2",RedirectUri.class);
 		me.add("/user",UserController.class);
-		/**
-		 * 存在一个bug
-		 * JSP support not configured
-		 */
-		me.add("/share",ShareController.class);
+		me.add("/jssdk",ShareController.class,"jsp");
 	}
 	
 	public void configPlugin(Plugins me) {
-		
+//		// 配置C3p0数据库连接池插件
+//		C3p0Plugin c3p0Plugin = new C3p0Plugin(PropKit.get("jdbcUrl"), PropKit.get("user"), PropKit.get("password").trim());
+//		me.add(c3p0Plugin);
+//		
+//		// 配置ActiveRecord插件
+//		ActiveRecordPlugin arp = new ActiveRecordPlugin(c3p0Plugin);
+//		me.add(arp);
+//		arp.addMapping("blog", Blog.class);	// 映射blog 表到 Blog模型
 	}
 	
 	public void configInterceptor(Interceptors me) {
